@@ -1,0 +1,58 @@
+name: "✨ Feature Request"
+description: "Sugira uma nova funcionalidade ou melhoria"
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Feature Request — AmabileAI
+        Descreva a funcionalidade que você gostaria de ver no projeto.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Resumo da Feature
+      description: Descreva a funcionalidade em uma frase
+      placeholder: "Ex: Adicionar modo escuro ao dashboard"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema que Resolve
+      description: Qual problema esta feature resolve?
+      placeholder: "Ex: Usuários reclamam de cansaço visual ao usar o sistema à noite"
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Solução Proposta
+      description: Como você imagina a solução?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Prioridade Sugerida
+      options:
+        - Alta (impacto direto no negócio)
+        - Média (melhoria significativa)
+        - Baixa (nice to have)
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternativas Consideradas
+      description: Você considerou outras soluções?
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexto Adicional
+      description: Screenshots, mockups ou referências

@@ -1,0 +1,70 @@
+name: "🐛 Bug Report"
+description: "Reporte um bug encontrado no projeto"
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Bug Report — AmabileAI
+        Preencha as informações abaixo para nos ajudar a reproduzir e corrigir o bug.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Resumo do Bug
+      description: Descreva o bug em uma frase
+      placeholder: "Ex: Botão de login não responde ao clicar"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Passos para Reproduzir
+      description: Liste os passos para reproduzir o bug
+      placeholder: |
+        1. Acesse a página X
+        2. Clique no botão Y
+        3. Observe o erro Z
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportamento Esperado
+      description: O que deveria acontecer?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Comportamento Atual
+      description: O que acontece de fato?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severidade
+      options:
+        - Crítico (sistema inacessível)
+        - Alto (funcionalidade principal quebrada)
+        - Médio (funcionalidade secundária afetada)
+        - Baixo (cosmético ou inconveniência)
+    validations:
+      required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: Navegador / Ambiente
+      placeholder: "Ex: Chrome 120, macOS 14.2"
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots / Logs
+      description: Adicione screenshots ou logs relevantes
